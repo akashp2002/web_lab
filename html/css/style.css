@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50rem;
+    background-color: rgb(33, 109, 49);
+    padding-left: 5px;
+    box-shadow: 0px 4px  rgb(177, 255, 203);
+
+}
+.nav_link{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.main_body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(rgb(5, 114, 29), rgb(255, 255, 255));
+    background-color: #000; 
+    color: aliceblue;
+    padding: 10px;
+}
