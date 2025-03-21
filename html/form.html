@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,6 +14,7 @@
             height: 100vh;
             margin: 0;
         }
+
         form {
             background-color: #fff;
             padding: 20px;
@@ -22,15 +23,18 @@
             width: 100%;
             max-width: 500px;
         }
+
         h1 {
             text-align: center;
             color: #333;
         }
+
         label {
             display: block;
             margin-top: 15px;
             color: #555;
         }
+
         input, select, textarea {
             width: 100%;
             padding: 10px;
@@ -39,23 +43,29 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+
         input[type="radio"], input[type="checkbox"] {
             width: auto;
             margin-right: 5px;
         }
+
         .gender-options {
             display: flex;
             justify-content: space-between;
             margin-top: 5px;
         }
-        .gender-options label {
-            margin-top: 0;
+
+        .error {
+            color: red;
+            font-size: 14px;
         }
+
         .buttons {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
         }
+
         input[type="submit"], input[type="reset"] {
             width: 48%;
             background-color: #007BFF;
@@ -66,9 +76,11 @@
             border-radius: 4px;
             font-size: 16px;
         }
+
         input[type="reset"] {
             background-color: #dc3545;
         }
+
         input[type="submit"]:hover, input[type="reset"]:hover {
             opacity: 0.9;
         }
@@ -76,57 +88,66 @@
 </head>
 <body>
 
-    <form>
-        <h1>Form</h1>
+<form id="registrationForm">
+    <h1>Registration Form</h1>
 
-        <label for="name">Enter name:</label>
-        <input type="text" id="name" placeholder="Enter your name">
+    <label for="name">Enter name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    <span class="error" id="nameError"></span>
 
-        <label for="email">Enter email:</label>
-        <input type="email" id="email" placeholder="Enter your email">
+    <label for="email">Enter email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+    <span class="error" id="emailError"></span>
 
-        <label for="phone">Enter phone:</label>
-        <input type="tel" id="phone" placeholder="Enter your phone">
+    <label for="phone">Enter phone:</label>
+    <input type="tel" id="phone" placeholder="Enter your phone">
+    <span class="error" id="phoneError"></span>
 
-        <label for="password">Enter password:</label>
-        <input type="password" id="password">
+    <label for="password">Enter password:</label>
+    <input type="password" id="password">
+    <span class="error" id="passwordError"></span>
 
-        <label for="qualification">Select qualification:</label>
-        <select id="qualification">
-            <option>High School</option>
-            <option>Bachelor's</option>
-            <option>Master's</option>
-            <option>PhD</option>
-        </select>
+    <label for="qualification">Select qualification:</label>
+    <select id="qualification">
+        <option>High School</option>
+        <option>Bachelor's</option>
+        <option>Master's</option>
+        <option>PhD</option>
+    </select>
 
-        <label>Select gender:</label>
-        <div class="gender-options">
-            <label><input type="radio" name="gender" value="male"> Male</label>
-            <label><input type="radio" name="gender" value="female"> Female</label>
-            <label><input type="radio" name="gender" value="other"> Other</label>
-        </div>
+    <label>Select gender:</label>
+    <div class="gender-options">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+    <span class="error" id="genderError"></span>
 
-        <label for="message">Message:</label>
-        <textarea id="message" placeholder="Enter your message" rows="5"></textarea>
+    <label for="message">Message:</label>
+    <textarea id="message" placeholder="Enter your message" rows="5"></textarea>
 
-        <label for="dob">Date of birth:</label>
-        <input type="date" id="dob">
+    <label for="dob">Date of birth:</label>
+    <input type="date" id="dob">
+    <span class="error" id="dobError"></span>
 
-        <label for="resume">Upload a resume:</label>
-        <input type="file" id="resume">
+    <label for="resume">Upload a resume:</label>
+    <input type="file" id="resume">
+    <span class="error" id="resumeError"></span>
 
-        <label for="color">Choose your favorite color:</label>
-        <input type="color" id="color">
+    <label for="color">Choose your favorite color:</label>
+    <input type="color" id="color">
 
-        <label for="subscribe">
-            <input type="checkbox" id="subscribe"> Subscribe to newsletter
-        </label>
+    <label for="subscribe">
+        <input type="checkbox" id="subscribe"> Subscribe to newsletter
+    </label>
 
-        <div class="buttons">
-            <input type="reset" value="Reset">
-            <input type="submit" value="Submit">
-        </div>
-    </form>
+    <div class="buttons">
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+<script src="./js/form.js" defer></script>
 
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hover to Change Image and Text</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    img {
+      width: 500px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: opacity 0.3s ease;
+    }
+    .text {
+      font-size: 20px;
+      margin-top: 10px;
+      transition: color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hover Over the Content!</h1>
+  
+  <div class="container" id="content">
+    <img id="image" src="./images/shoes1.jpg" alt="Original Image" />
+    <p id="text" class="text">Original Text</p>
+  </div>
+
+  <script src="./js/changeimg.js"></script>
+</body>
+</html>
