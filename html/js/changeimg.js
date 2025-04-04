@@ -10,3 +10,4 @@ content.addEventListener('mouseout', () => {
   image.src = './images/shoes1.jpg';
   text.textContent = 'Original Text';
 });
+
